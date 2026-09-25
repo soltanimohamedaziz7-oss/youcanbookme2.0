@@ -1,0 +1,478 @@
+/* =========================================================
+   1. RESET / BASE
+   ========================================================= */
+
+/* On enlève les marges et espacements par défaut du navigateur */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Style général de la page */
+body {
+    min-height: 100vh;
+
+    /* Couleur du fond autour du téléphone */
+    background: #edf3f7;
+
+    /* On centre le téléphone horizontalement et verticalement */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Police utilisée dans toute la page */
+    font-family: Arial, Helvetica, sans-serif;
+
+    /* Couleur principale du texte */
+    color: #092b49;
+}
+
+
+/* =========================================================
+   2. CADRE DU TÉLÉPHONE
+   ========================================================= */
+
+/* Conteneur qui représente le téléphone */
+.phone {
+    position: relative;
+
+    /* Dimensions du téléphone */
+    width: 390px;
+    height: 844px;
+
+    /* Fond blanc */
+    background: #ffffff;
+
+    /* Bordure extérieure du téléphone */
+    border: 8px solid #173246;
+
+    /* Coins arrondis */
+    border-radius: 36px;
+
+    /* Tout ce qui dépasse du téléphone est caché */
+    overflow: hidden;
+
+    /* Petite ombre autour du téléphone */
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================================
+   3. APPLICATION DERRIÈRE LE MENU
+   ========================================================= */
+
+/* Contenu principal de l'application */
+.app {
+    width: 100%;
+    height: 100%;
+
+    background: #f4f7f8;
+}
+
+
+/* =========================================================
+   4. BARRE SUPÉRIEURE
+   ========================================================= */
+
+/* Header situé en haut de l'application */
+.topbar {
+    height: 66px;
+
+    /* Couleur turquoise du header */
+    background: #087985;
+
+    /* Alignement du profil à droite */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    /* Espace intérieur */
+    padding: 0 15px;
+}
+
+
+/* Bloc contenant l'avatar et le prénom */
+.user {
+    display: flex;
+    align-items: center;
+
+    /* Espace entre l'avatar et Sarah */
+    gap: 7px;
+
+    color: white;
+
+    font-size: 10px;
+}
+
+
+/* Cercle de l'utilisateur */
+.user-avatar {
+    width: 26px;
+    height: 26px;
+
+    border-radius: 50%;
+
+    background: #aebcc7;
+
+    /* Centre l'icône */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #31516b;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   5. CONTENU DERRIÈRE LE MENU
+   ========================================================= */
+
+.content {
+    padding: 16px;
+}
+
+
+/* Carte de bienvenue */
+.welcome {
+    height: 78px;
+
+    background: #e7f0f2;
+
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 14px;
+
+    margin-bottom: 12px;
+}
+
+
+/* Texte de bienvenue */
+.welcome-text {
+    font-size: 11px;
+    color: #173d59;
+}
+
+
+/* Titre de bienvenue */
+.welcome-text strong {
+    display: block;
+
+    font-size: 15px;
+
+    margin-bottom: 5px;
+}
+
+
+/* Cœur */
+.heart {
+    font-size: 38px;
+}
+
+
+/* =========================================================
+   6. FAUSSES CARTES DU CONTENU
+   ========================================================= */
+
+/* Cartes visibles derrière le menu */
+.fake-card {
+    height: 92px;
+
+    background: white;
+
+    border: 1px solid #dfe8ec;
+
+    border-radius: 12px;
+
+    margin-bottom: 10px;
+
+    padding: 15px;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* Petit carré contenant l'icône */
+.fake-icon {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 10px;
+
+    background: #e8f3f5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #214f71;
+}
+
+
+/* =========================================================
+   7. VOILE SOMBRE DERRIÈRE LE MENU
+   ========================================================= */
+
+/*
+   Ce voile permet de rendre le contenu derrière
+   le menu plus sombre.
+
+   Il commence sous le menu et couvre toute
+   l'application.
+*/
+.overlay {
+    position: absolute;
+
+    /* Le voile prend toute la surface du téléphone */
+    inset: 0;
+
+    /* Couleur semi-transparente */
+    background: rgba(26, 50, 63, 0.43);
+
+    /* Il doit être au-dessus du contenu */
+    z-index: 10;
+}
+
+
+/* =========================================================
+   8. MENU LATÉRAL
+   ========================================================= */
+
+/*
+   Menu blanc qui apparaît à gauche.
+
+   La largeur de 268px correspond au rendu
+   de ta capture.
+*/
+.menu {
+    position: absolute;
+
+    /* Position en haut à gauche */
+    top: 0;
+    left: 0;
+
+    /* Largeur du menu */
+    width: 268px;
+
+    /* Hauteur complète du téléphone */
+    height: 100%;
+
+    /* Fond blanc */
+    background: #ffffff;
+
+    /* Le menu doit être au-dessus du voile */
+    z-index: 20;
+
+    /* Espacement intérieur */
+    padding: 70px 23px 30px 23px;
+
+    /* Petite ombre sur le côté droit */
+    box-shadow:
+        7px 0 20px rgba(0, 0, 0, 0.04);
+}
+
+
+/* =========================================================
+   9. TITRE "MENU"
+   ========================================================= */
+
+.menu-title {
+    /* Taille du texte */
+    font-size: 17px;
+
+    /* Texte en gras */
+    font-weight: 700;
+
+    /* Couleur */
+    color: #082b49;
+
+    /* Décalage à gauche */
+    padding-left: 10px;
+
+    /* Espace sous le titre */
+    margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   10. LIGNE SOUS LE TITRE
+   ========================================================= */
+
+.menu-separator {
+    height: 1px;
+
+    /* Couleur de la ligne */
+    background: #d8e2e7;
+
+    /* Espace sous la ligne */
+    margin: 0 0 14px 0;
+}
+
+
+/* =========================================================
+   11. LISTE DU MENU
+   ========================================================= */
+
+/* On enlève les puces de la liste */
+.menu-list {
+    list-style: none;
+}
+
+
+/* =========================================================
+   12. LIENS DU MENU
+   ========================================================= */
+
+/*
+   Chaque élément du menu :
+
+   Accueil
+   Rendez-vous
+   Soignants
+   Profil
+   etc.
+*/
+.menu-item {
+    /* Affichage horizontal */
+    display: flex;
+
+    /* Centrage vertical */
+    align-items: center;
+
+    /* Hauteur de chaque ligne */
+    height: 56px;
+
+    /* Décalage à gauche */
+    padding-left: 10px;
+
+    /* Enlève le soulignement */
+    text-decoration: none;
+
+    /* Couleur du texte */
+    color: #092b49;
+
+    /* Taille du texte */
+    font-size: 11px;
+
+    /* Texte légèrement gras */
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   13. PETITS CARRÉS DES ICÔNES
+   ========================================================= */
+
+.menu-icon {
+    /* Taille du carré */
+    width: 30px;
+    height: 30px;
+
+    /* Espace entre l'icône et le texte */
+    margin-right: 10px;
+
+    /* Coins arrondis */
+    border-radius: 8px;
+
+    /* Couleur du carré */
+    background: #edf7f8;
+
+    /* Centre l'icône */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Couleur de l'icône */
+    color: #17496b;
+
+    /* Taille de l'icône */
+    font-size: 14px;
+
+    /* Empêche le carré de rétrécir */
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   14. EFFET AU SURVOL
+   ========================================================= */
+
+/*
+   Quand la souris passe sur un élément,
+   le petit carré devient légèrement plus foncé.
+*/
+.menu-item:hover .menu-icon {
+    background: #dff0f2;
+}
+
+
+/* =========================================================
+   15. SÉPARATEUR ENTRE LES SECTIONS
+   ========================================================= */
+
+.menu-section-separator {
+    height: 1px;
+
+    background: #d8e2e7;
+
+    /*
+       Marge :
+       haut | droite | bas | gauche
+    */
+    margin: 10px 10px 10px 0;
+}
+
+
+/* =========================================================
+   16. PREMIÈRE SECTION DU MENU
+   ========================================================= */
+
+.first-section {
+    margin-bottom: 2px;
+}
+
+
+/* =========================================================
+   17. DEUXIÈME SECTION DU MENU
+   ========================================================= */
+
+.second-section {
+    margin-top: 1px;
+}
+
+
+/* =========================================================
+   18. RESPONSIVE MOBILE
+   ========================================================= */
+
+/*
+   Si l'écran réel est inférieur à 430px,
+   le téléphone prend toute la largeur et toute
+   la hauteur de l'écran.
+*/
+@media (max-width: 430px) {
+
+    body {
+        background: #ffffff;
+    }
+
+    .phone {
+        width: 100vw;
+        height: 100vh;
+
+        /* On enlève la bordure du téléphone */
+        border: none;
+
+        /* On enlève les coins arrondis */
+        border-radius: 0;
+    }
+}

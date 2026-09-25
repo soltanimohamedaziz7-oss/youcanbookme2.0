@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Mes soignants</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<!-- PAGE SOIGNANTS : liste des professionnels de santé -->
+
+<body>
+  <header class="topbar"><a class="brand" href="dashboard.html"><span class="brand-mark">♡</span>YouCanBookMe</a>
+    <div class="user-menu"><span class="avatar-mini"></span>Bonjour, Sarah⌄</div>
+  </header>
+  <main class="app-shell content">
+    <!-- Titre de page et bouton d’ajout -->
+    <div class="toolbar">
+      <h1 class="page-title">Mes soignants</h1><a href="add-provider.html" class="btn btn-primary">＋ Ajouter un
+        soignant</a>
+    </div>
+    <!-- Liste et recherche des soignants -->
+    <section class="card list-card"><input class="search" placeholder="⌕  Rechercher un soignant..."
+        style="margin-bottom:8px">
+      <!-- Une ligne de soignant avec ses actions -->
+      <div class="provider-row">
+        <div class="provider-avatar">♙</div>
+        <div class="provider-info"><strong>Dr Martin</strong><span>Médecin généraliste</span></div>
+        <div class="provider-actions"><a class="icon-btn" href="provider-detail.html">◉</a><a class="icon-btn"
+            href="add-provider.html">✎</a><button class="icon-btn red">♜</button><a class="icon-btn blue"
+            href="appointments.html"></a><button class="icon-btn yellow">✉</button></div>
+      </div>
+      <div class="provider-row">
+        <div class="provider-avatar">♙</div>
+        <div class="provider-info"><strong>Dr Dupont</strong><span>Cardiologue</span></div>
+        <div class="provider-actions"><a class="icon-btn" href="provider-detail.html">◉</a><a class="icon-btn"
+            href="add-provider.html">✎</a><button class="icon-btn red">♜</button><a class="icon-btn blue"
+            href="appointments.html"></a><button class="icon-btn yellow">✉</button></div>
+      </div>
+      <div class="provider-row">
+        <div class="provider-avatar">♙</div>
+        <div class="provider-info"><strong>Dr Moreau</strong><span>Dermatologue</span></div>
+        <div class="provider-actions"><a class="icon-btn" href="provider-detail.html">◉</a><a class="icon-btn"
+            href="add-provider.html">✎</a><button class="icon-btn red">♜</button><a class="icon-btn blue"
+            href="appointments.html"></a><button class="icon-btn yellow">✉</button></div>
+      </div>
+    </section>
+  </main>
+  <!-- Navigation mobile -->
+  <nav class="mobile-nav">
+    <a class="active nav-btn" href="dashboard.html">Accueil</a>
+    <a class="nav-btn" href="appointments.html">Rendez-vous</a>
+    <a class="nav-btn" href="profile.html">Profil</a>
+  </nav>
+</body>
+
+</html>

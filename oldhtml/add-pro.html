@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Ajouter un soignant</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<!-- PAGE AJOUT SOIGNANT : formulaire de création d’un soignant -->
+
+<body>
+  <header class="topbar"><a class="brand" href="dashboard.html"><span class="brand-mark">♡</span>YouCanBookMe</a>
+    <div class="user-menu"><span class="avatar-mini"></span>Bonjour, Sarah⌄</div>
+  </header>
+  <main class="app-shell content">
+    <a class="back-link" href="providers.html">‹ Retour à mes soignants</a>
+    <!-- Carte contenant le formulaire -->
+    <section class="card form-card">
+      <h1 class="page-title">Ajouter un soignant</h1>
+      <p class="page-subtitle" style="margin-bottom:24px">Ajoutez les informations de votre professionnel de santé.</p>
+      <!-- Champ obligatoire : nom du soignant -->
+      <div class="form-group"><label>Nom
+          <div class="form-group"><label>Nom *</label>
+            <div class="input-wrap"><span class="input-icon">♙</span><input class="search" placeholder="Ex : Dr Martin">
+            </div>
+          </div>
+          <div class="form-group"><label>Adresse</label>
+            <div class="input-wrap"><span class="input-icon">⌖</span><input class="search"
+                placeholder="Ex : 12 rue de la Paix, Lyon"></div>
+          </div>
+          <div class="form-group"><label>Email</label>
+            <div class="input-wrap"><span class="input-icon">✉</span><input class="search"
+                placeholder="Ex : martin@exemple.fr"></div>
+          </div>
+          <div class="form-group"><label>Discipline</label>
+            <div class="input-wrap"><span class="input-icon">▣</span><select class="search">
+                <option>Sélectionner une discipline</option>
+                <option>Médecin généraliste</option>
+                <option>Cardiologue</option>
+                <option>Dermatologue</option>
+                <option>Infirmier</option>
+              </select></div>
+          </div>
+          <!-- Actions du formulaire : annuler ou enregistrer -->
+          <div class="form-actions"><a class="btn btn-outline" href="providers.html">Annuler</a><a
+              class="btn btn-primary" href="providers.html">Enregistrer</a></div>
+    </section>
+  </main>
+  <!-- Navigation mobile -->
+  <nav class="mobile-nav">
+    <a class="active nav-btn" href="dashboard.html">Accueil</a>
+    <a class="nav-btn" href="appointments.html">Rendez-vous</a>
+    <a class="nav-btn" href="profile.html">Profil</a>
+  </nav>
+</body>
+
+</html>

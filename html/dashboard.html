@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Accueil</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<!-- PAGE ACCUEIL : tableau de bord principal -->
+
+<body>
+  <!-- Barre supérieure commune à l’application -->
+  <header class="topbar"><a class="brand" href="dashboard.html"><span class="brand-mark">♡</span>YouCanBookMe</a>
+    <div class="user-menu"><span class="avatar-mini">👤</span>Bonjour, Sarah⌄</div>
+  </header>
+  <main class="app-shell content">
+    <!-- Message de bienvenue -->
+    <section class="dashboard-hero">
+      <div class="hero-copy">
+        <h1>Bonjour Sarah !</h1>
+        <p>Voici votre suivi médical du jour.</p>
+      </div>
+      <div class="hero-art">📅 💗</div>
+    </section>
+    <!-- Accès rapides vers les principales fonctionnalités -->
+    <section class="quick-grid">
+      <a class="card quick-card" href="rdvs.html">
+        <div class="quick-icon">▣</div>
+        <h3>Mes rendez-vous</h3><span>→</span>
+      </a>
+      <a class="card quick-card" href="mesSoignants.html">
+        <div class="quick-icon">♟</div>
+        <h3>Mes soignants</h3><span>→</span>
+      </a>
+      <a class="card quick-card" href="profil.html">
+        <div class="quick-icon">●</div>
+        <h3>Mon profil</h3><span>→</span>
+      </a>
+      <a class="card quick-card" href="#">
+        <div class="quick-icon">⚙</div>
+        <h3>Paramètres</h3><span>→</span>
+      </a>
+    </section>
+    <!-- Aperçu du prochain rendez-vous -->
+    <section>
+      <div class="toolbar">
+        <h2 class="section-title">Prochain rendez-vous</h2><a href="rdvs.html"
+          style="font-size:11px;color:var(--primary);font-weight:700">Voir tout</a>
+      </div>
+      <a class="card appointment-card" href="rdvs.html">
+        <div class="date-box"><strong>12</strong><small>Mai</small></div>
+        <div class="appt-info">
+          <h3>Dr Martin — Médecin généraliste</h3>
+          <p>10:30 - 11:00</p>
+          <p>12 rue de la Paix, Lyon</p>
+        </div>
+        <div class="arrow">›</div>
+      </a>
+    </section>
+  </main>
+  <!-- Navigation fixe en bas de l’écran sur mobile -->
+   <nav class="mobile-nav">
+    <a class="active nav-btn" href="dashboard.html">Accueil</a>
+    <a class="nav-btn" href="rdvs.html">Rendez-vous</a>
+    <a class="nav-btn" href="profil.html">Profil</a>
+  </nav>
+  </nav>
+</body>
+
+</html>

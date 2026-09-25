@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Mes rendez-vous</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<!-- PAGE RENDEZ-VOUS : liste des rendez-vous à venir -->
+
+<body>
+  <!-- Barre supérieure -->
+  <header class="topbar"><a class="brand" href="dashboard.html"><span class="brand-mark">♡</span>YouCanBookMe</a>
+    <div class="user-menu"><span class="avatar-mini">👤</span>Bonjour, Sarah⌄</div>
+  </header>
+  <main class="app-shell content">
+    <div class="toolbar">
+      <div>
+        <h1 class="page-title">Mes rendez-vous</h1>
+      </div><a href="#" class="btn btn-primary">＋ Ajouter un rendez-vous</a>
+    </div>
+    <!-- Onglets : rendez-vous à venir / passés -->
+    <div class="tabs"><span class="tab active">À venir</span><span class="tab">Passés</span></div>
+    <!-- Carte représentant un rendez-vous -->
+    <a class="card appointment-card" href="#">
+      <div class="date-box"><strong>12</strong><small>Mai</small></div>
+      <div class="appt-info">
+        <h3>Dr Martin — Médecin généraliste</h3>
+        <p>10:30 - 11:00</p>
+        <p>12 rue de la Paix, Lyon</p>
+      </div>
+      <div class="arrow">›</div>
+    </a>
+    <a class="card appointment-card" href="#">
+      <div class="date-box"><strong>18</strong><small">Mai</small></div>
+      <div class="appt-info">
+        <h3>Dr Dupont — Cardiologue</h3>
+        <p>14:00 - 15:00</p>
+        <p>8 avenue des Lilas, Lyon</p>
+      </div>
+      <div class="arrow">›</div>
+    </a>
+    <a class="card appointment-card" href="#">
+      <div class="date-box"><strong>25</strong><small>Mai</small></div>
+      <div class="appt-info">
+        <h3>Dr Moreau — Dermatologue</h3>
+        <p>09:30 - 10:00</p>
+        <p>5 rue des Fleurs, Lyon</p>
+      </div>
+      <div class="arrow">›</div>
+    </a>
+  </main>
+  <!-- Navigation mobile fixe -->
+  <nav class="mobile-nav">
+    <a class="nav-btn" href="dashboard.html">Accueil</a>
+    <a class="nav-btn active" href="rdvs.html">Rendez-vous</a>
+    <a class="nav-btn" href="profil.html">Profil</a>
+  </nav>
+</body>
+
+</html>
